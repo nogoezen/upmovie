@@ -36,7 +36,7 @@ const getUpcomingDateRange = () => {
 };
 
 // Create the TMDB API instance
-const api = createApi({
+export const tmdbApi = createApi({
   reducerPath: 'tmdbApi',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.themoviedb.org/3',
@@ -204,7 +204,7 @@ const api = createApi({
   }),
 });
 
-// Export the hooks and API
+// Export the hooks
 export const {
   useGetMoviesQuery,
   useGetMovieQuery,
@@ -212,6 +212,4 @@ export const {
   useGetActorQuery,
   useGetMoviesByActorIdQuery,
   useGetGenresQuery,
-} = api;
-
-export { api as tmdbApi }; 
+} = tmdbApi; 
