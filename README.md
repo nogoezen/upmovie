@@ -71,11 +71,20 @@ yarn install
 ```
 
 3. **Set up environment variables**
-Create a `.env` file in the root directory:
+```bash
+# Copy the example environment file
+cp .env.example .env
+```
+
+Then edit `.env` and add your API keys:
+- Get your TMDB API key from [https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
+- Get your Alan AI key from [https://alan.app/](https://alan.app/)
+
+Required environment variables:
 ```env
 NEXT_PUBLIC_TMDB_KEY=your_tmdb_api_key_here
+NEXT_PUBLIC_ALAN_SDK_KEY=your_alan_ai_key_here
 ```
-Get your TMDB API key from [https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
 
 4. **Start the development server**
 ```bash
